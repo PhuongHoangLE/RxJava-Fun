@@ -1,4 +1,4 @@
-package com.phl;
+package com.phl.CombiningObservables;
 
 import io.reactivex.rxjava3.core.Observable;
 

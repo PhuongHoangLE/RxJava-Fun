@@ -8,7 +8,7 @@ classDef topic fill:#ed2633,stroke-width:0,color:#fff;
 A([Reactive Programming]):::topic
 A --> B(Reactive Manifesto)
 A --> C(Sync vs Async)
-A --> D(Callback vs Hell)
+A --> D(Callback Hell)
 A --> E(Pull vs Push)
 A --> F(Observer Design Pattern)
 A --> G(Concurrency and Parallel Programming)

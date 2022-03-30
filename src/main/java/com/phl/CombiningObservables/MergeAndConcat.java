@@ -1,20 +1,20 @@
-package com.phl;
+package com.phl.CombiningObservables;
 
 import com.phl.util.Lets;
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.disposables.Disposable;
 
-import java.util.Arrays;
 import java.util.concurrent.TimeUnit;
 
-public class Ambiguous {
+public class MergeAndConcat {
 
     public static void main(String[] args) throws InterruptedException {
 
-        Observable<String> source1 = Observable.interval(1, TimeUnit.SECONDS).take(10).map(e -> "Source 1: " + e);
-        Observable<String> source2 = Observable.interval(10, TimeUnit.MILLISECONDS).take(10).map(e -> "Source 2: " + e);
+        Observable<String> source1 = Observable.interval(500, TimeUnit.MILLISECONDS).map(Object::toString).take(3);
+        Observable<String> source2 = Observable.interval(1000, TimeUnit.MILLISECONDS).map(e -> "------------- " + e);
         Disposable disposable = Observable
-            .amb(Arrays.asList(source1, source2))
+//            .merge(source1, source2)
+            .concat(source1, source2)
             .subscribe(System.out::println);
 
         Lets.disposeAfter(10000, disposable);

@@ -1,4 +1,4 @@
-package com.phl;
+package com.phl.ObservableAndObserver;
 
 import com.phl.util.Lets;
 import io.reactivex.rxjava3.core.Observable;
@@ -6,7 +6,7 @@ import io.reactivex.rxjava3.disposables.Disposable;
 
 import java.util.concurrent.TimeUnit;
 
-public class ConnectableObservable {
+public class HotAndColdObservables {
 
     public static void main(String[] args) throws InterruptedException {
 

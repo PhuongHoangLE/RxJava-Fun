@@ -1,4 +1,4 @@
-package com.phl;
+package com.phl.Operators;
 
 import com.phl.util.Lets;
 import io.reactivex.rxjava3.core.Observable;
@@ -12,12 +12,12 @@ public class Operators {
 
     public static void main(String[] args) throws InterruptedException {
 
-//        suppressing();
+        suppressing();
 //        transforming();
 //        reducing();
 //        collection();
 //        recovery();
-        actions();
+//        actions();
     }
 
     private static void actions() {
@@ -129,15 +129,15 @@ public class Operators {
     }
 
     private static void suppressing() {
-//        filter();
-        Observable
-            .just(1, 2, 3, 4, 4, 8, 6, 7, 5, 2)
-            .take(5)
-            .skip(1)
-            .distinct()
-            .elementAt(1)
-            .subscribe(System.out::println)
-            .dispose();
+        filter();
+//        Observable
+//            .just(1, 2, 3, 4, 4, 8, 6, 7, 5, 2)
+//            .take(5)
+//            .skip(1)
+//            .distinct()
+//            .elementAt(1)
+//            .subscribe(System.out::println)
+//            .dispose();
     }
 
     private static void filter() {

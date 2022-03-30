@@ -1,4 +1,4 @@
-package com.phl;
+package com.phl.ObservableAndObserver;
 
 import io.reactivex.rxjava3.core.Observable;
 import io.reactivex.rxjava3.disposables.CompositeDisposable;
@@ -6,13 +6,13 @@ import io.reactivex.rxjava3.disposables.Disposable;
 
 import java.util.concurrent.TimeUnit;
 
-public class Disposing {
+public class DisposingResources {
 
     public static void main(String[] args) throws InterruptedException {
 
 //        disposeBefore();
-//        disposeAfter();
-        compositeDisposable();
+        disposeAfter();
+//        compositeDisposable();
     }
 
     private static void disposeBefore() throws InterruptedException {

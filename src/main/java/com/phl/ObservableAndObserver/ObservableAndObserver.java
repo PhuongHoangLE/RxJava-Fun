@@ -14,20 +14,20 @@ import java.util.List;
 import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
-public class Demo {
+public class ObservableAndObserver {
 
     public static void main(String[] args) throws InterruptedException {
 
-        observable().subscribe(observer());
-        Observable.just(1, 2, 3).subscribe(System.out::println).dispose();
-        Observable.fromIterable(List.of("A", "B", "C")).subscribe(System.out::println).dispose();
-        Observable.range(1, 3).subscribe(System.out::println).dispose();
-        interval();
-        Observable.empty().subscribe(System.out::println).dispose();
+//        observable().subscribe(observer());
+//        Observable.just(1, 2, 3).subscribe(System.out::println).dispose();
+//        Observable.fromIterable(List.of("A", "B", "C")).subscribe(System.out::println).dispose();
+//        Observable.range(1, 3).subscribe(System.out::println).dispose();
+//        interval();
+//        Observable.empty().subscribe(System.out::println).dispose();
         never();
-        error();
-        defer();
-        fromCallable();
+//        error();
+//        defer();
+//        fromCallable();
     }
 
     private static void interval() throws InterruptedException {
@@ -75,6 +75,18 @@ public class Demo {
     }
 
     private static Observable<Integer> observable() {
+
+//        return Observable.create(emitter -> {
+//            try {
+//                emitter.onNext(1);
+//                emitter.onNext(2);
+//                emitter.onNext(3);
+//                emitter.onComplete();
+//            } catch (Throwable t) {
+//                emitter.onError(t);
+//            }
+//        });
+
         return new ObservableCreate<>(emitter -> {
             try {
                 emitter.onNext(1);
